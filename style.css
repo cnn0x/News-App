@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-container {
+  background-color: rgb(238, 241, 245);
+  width: 400px;
+  height: 90%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+  position: relative;
+  outline: 2px solid rgb(122, 122, 122);
+}
+
+.screen-top {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgb(247, 113, 113);
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.screen-body {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.screen-bottom {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.5px solid rgb(221, 221, 221);
+  background-color: rgb(247, 77, 77);
+  transition: 0.3s;
+}
+
+.screen-bottom a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.post-content {
+  padding: 10px;
+  width: 100%;
+  min-height: 20%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgb(221, 221, 221);
+  position: relative;
+}
+
+.screen-body::-webkit-scrollbar {
+  display: none;
+}
+
+.post-content img {
+  width: 100%;
+  height: 13vh;
+  object-fit: cover;
+}
+
+.post-header {
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+}
+
+.post-content h1 {
+  font-weight: 700;
+}
+
+.post-content h2 {
+  font-weight: 600;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  align-items: flex-end;
+  color: rgb(122, 122, 122);
+  margin-bottom: 10px;
+}
+
+.hits {
+  position: absolute;
+  color: white;
+  padding: 5px 10px;
+  background-color: rgb(247, 113, 113);
+  border-radius: 5px;
+  top: 20px;
+  left: 20px;
+}
+
+.post-content:hover h1 {
+  color: rgb(247, 77, 77);
+  cursor: pointer;
+}
+
+.feed-text {
+  background: white;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: rgb(247, 77, 77);
+}
+
+.bookmark {
+  position: absolute;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+  right: 15px;
+  top: 20px;
+  font-size: 1.4rem;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.658);
+}
+
+@media (max-width: 768px) {
+  .mobile-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .post-content img {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .post-content img {
+    height: 18vh;
+  }
+}
