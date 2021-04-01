@@ -4,6 +4,12 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -14,7 +20,7 @@ body {
 }
 
 .mobile-container {
-  background-color: rgb(238, 241, 245);
+  background-color: rgb(247, 230, 230);
   width: 400px;
   height: 90%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -30,13 +36,22 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: rgb(247, 113, 113);
+  background-color: rgb(247, 77, 77);
   font-size: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
   transition: 0.3s;
+}
+
+.ln {
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+  font-size: 1.2rem;
+  background-color: rgb(247, 77, 77);
+  display: inline;
+  padding: 0 5px;
 }
 
 .screen-body {
@@ -80,7 +95,7 @@ body {
 .imp-news {
   width: 100%;
   margin-top: 45px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   display: flex;
   flex-wrap: nowrap;
   overflow: scroll;
@@ -105,6 +120,11 @@ body {
   width: 150px;
   height: 250px;
   object-fit: cover;
+  transition: 0.3s;
+}
+
+.content:hover img {
+  transform: scale(1.1);
 }
 
 .content::after {
