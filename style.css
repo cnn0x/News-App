@@ -77,6 +77,52 @@ body {
   position: relative;
 }
 
+.imp-news {
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  padding: 0 10px;
+}
+
+.imp-news::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  min-width: 150px;
+  height: 250px;
+  background-color: rgb(122, 122, 122);
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.content img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.content::after {
+  content: "Lorem ipsum dolor sit amet consectetur.";
+  font-size: 0.8rem;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 700;
+  padding: 5px;
+  width: 150px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.589);
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
 .screen-body::-webkit-scrollbar {
   display: none;
 }
@@ -85,6 +131,16 @@ body {
   width: 100%;
   height: 13vh;
   object-fit: cover;
+  transition: 0.3s;
+}
+
+.post-img {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.post-content:hover img {
+  transform: scale(1.1);
 }
 
 .post-header {
@@ -117,6 +173,7 @@ body {
   border-radius: 5px;
   top: 20px;
   left: 20px;
+  z-index: 2;
 }
 
 .post-content:hover h1 {
@@ -140,6 +197,7 @@ body {
   top: 20px;
   font-size: 1.4rem;
   text-shadow: 1px 2px rgba(0, 0, 0, 0.658);
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -155,11 +213,15 @@ body {
 
 @media (max-width: 480px) {
   .mobile-container {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 
   .post-content img {
     height: 18vh;
+  }
+
+  .screen-bottom {
+    position: fixed;
   }
 }
