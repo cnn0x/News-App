@@ -1,8 +1,8 @@
 let scrollPos = 0;
-const screenBody = document.querySelector(".screen-body");
+const screenBody = document.querySelector(".home-page");
 const scrollCheck = document.querySelector(".scroll-check");
-const topBar = document.querySelector(".screen-top");
-const bottomBar = document.querySelector(".screen-bottom");
+const topBar = document.querySelector(".top-nav");
+const bottomBar = document.querySelector(".bottom-nav");
 const width = document.querySelectorAll(".content").offsetWidth;
 
 screenBody.addEventListener("scroll", function () {
@@ -37,15 +37,15 @@ slider.addEventListener("mousemove", (e) => {
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
   const walk = x - startX;
-  slider.scrollLeft = scrollLeft - walk;
+  slider.scrollLeft = scrollLeft - walk * 3;
 });
 
-const post = document.querySelector(".post-content");
+const post = document.querySelector(".content-box");
 
 post.addEventListener("click", function () {
-  document.querySelector(".post-active").style.display = "block";
+  document.querySelector(".post-active").style.transform = "translateY(0)";
 });
 
 function closePost() {
-  document.querySelector(".post-active").style.display = "none";
+  document.querySelector(".post-active").style.transform = "translateY(100%)";
 }

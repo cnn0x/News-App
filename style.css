@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   padding: 0;
@@ -25,20 +26,92 @@ body {
   outline: 2px solid rgb(122, 122, 122);
 }
 
-.screen-top {
+.top-nav {
   height: 40px;
   width: 100%;
+  padding: 0 10px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
   background-color: rgb(247, 77, 77);
-  font-size: 0.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: rgb(255, 255, 255);
   transition: 0.3s;
+}
+
+.home-page {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.home-page::-webkit-scrollbar {
+  display: none;
+}
+
+.content-box {
+  padding: 10px;
+  width: 100%;
+  min-height: 20%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgb(221, 221, 221);
+  position: relative;
+}
+
+.content-box:active {
+  background-color: rgb(243, 243, 243);
+}
+
+.content-box h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+
+.content-box h2 {
+  font-weight: 500;
+}
+
+.content-box:active img {
+  transform: scale(1.1);
+}
+
+.content-box:hover h1 {
+  color: rgb(247, 77, 77);
+  cursor: pointer;
+}
+
+.content-box img {
+  width: 100%;
+  height: 13vh;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.bottom-nav {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(247, 77, 77);
+  transition: 0.3s;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  border-radius: 50%;
 }
 
 .ln {
@@ -50,48 +123,6 @@ body {
   padding: 0 5px;
 }
 
-.screen-body {
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-}
-
-.screen-bottom {
-  height: 50px;
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-top: 0.5px solid rgb(221, 221, 221);
-  background-color: rgb(247, 77, 77);
-  transition: 0.3s;
-}
-
-.screen-bottom a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-}
-
-.post-content {
-  padding: 10px;
-  width: 100%;
-  min-height: 20%;
-  background-color: rgb(255, 255, 255);
-  margin-bottom: 5px;
-  overflow: hidden;
-  border-bottom: 0.5px solid rgb(221, 221, 221);
-  position: relative;
-}
-
-.post-content:active {
-  background-color: rgb(243, 243, 243);
-}
-
 .post-active {
   width: 100%;
   height: 100%;
@@ -99,16 +130,19 @@ body {
   position: absolute;
   z-index: 6;
   overflow: scroll;
+  transform: translateY(0);
+  transition: 0.4s;
 }
 
 .post-active::-webkit-scrollbar {
   display: none;
 }
 
-.post-active img {
+.cover-image {
   width: 100%;
   height: 25vh;
   object-fit: cover;
+  border-bottom: 5px solid rgb(247, 77, 77);
 }
 
 .post-active img {
@@ -125,7 +159,7 @@ body {
 }
 
 .post-body {
-  padding: 10px;
+  padding: 15px;
 }
 
 .post-body p {
@@ -194,7 +228,7 @@ body {
   transition: 0.3s;
 }
 
-.content:hover img {
+.content:active img {
   transform: scale(1.1);
 }
 
@@ -215,37 +249,14 @@ body {
   top: -10px;
 }
 
-.screen-body::-webkit-scrollbar {
-  display: none;
-}
-
-.post-content img {
-  width: 100%;
-  height: 13vh;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
 .post-img {
   overflow: hidden;
   margin-bottom: 5px;
 }
 
-.post-content:hover img {
-  transform: scale(1.1);
-}
-
 .post-header {
   font-size: 0.6rem;
   margin-bottom: 10px;
-}
-
-.post-content h1 {
-  font-weight: 700;
-}
-
-.post-content h2 {
-  font-weight: 600;
 }
 
 .details {
@@ -266,11 +277,6 @@ body {
   top: 20px;
   left: 20px;
   z-index: 2;
-}
-
-.post-content:hover h1 {
-  color: rgb(247, 77, 77);
-  cursor: pointer;
 }
 
 .feed-text {
