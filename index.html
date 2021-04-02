@@ -37,12 +37,36 @@
         </div>
         <div class="post-body"></div>
       </div>
+      <div class="right-menu">
+        <span
+          onclick="rightMenuClose();"
+          style="
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            height: 40px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-left: 10px;
+            padding-bottom: 8px;
+            cursor: pointer;
+          "
+          >&times;</span
+        >
+      </div>
       <div class="top-nav">
         <span class="material-icons"> person </span>
         <div>
           <span class="material-icons"> linear_scale </span>
         </div>
-        <span class="material-icons"> menu_open </span>
+        <span
+          style="cursor: pointer"
+          onclick="rightMenuOpen();"
+          class="material-icons menu-open"
+        >
+          menu_open
+        </span>
       </div>
       <div class="home-page">
         <div class="imp-news">
@@ -70,7 +94,7 @@
         </div>
         <h1 class="ln">Latest News</h1>
         <div
-          style="border-top: 5px solid rgb(247, 77, 77)"
+          style="border-top: 2px solid rgb(247, 77, 77)"
           class="content-box scroll-check"
         >
           <div class="top-info">
@@ -431,19 +455,25 @@
         </div>
       </div>
       <div class="bottom-nav">
-        <a href=""
-          ><h1 class="feed">
+        <a href="#"
+          ><h1 class="bl bl1 bl-active">
             <span class="material-icons"> receipt </span>
           </h1></a
         >
-        <a href=""
-          ><h1><span class="material-icons"> whatshot </span></h1></a
+        <a href="#"
+          ><h1 class="bl bl2">
+            <span class="material-icons"> whatshot </span>
+          </h1></a
         >
-        <a href=""
-          ><h1><span class="material-icons"> video_library </span></h1></a
+        <a href="#"
+          ><h1 class="bl bl3">
+            <span class="material-icons"> video_library </span>
+          </h1></a
         >
-        <a href=""
-          ><h1><span class="material-icons"> bookmark </span></h1></a
+        <a href="#"
+          ><h1 class="bl bl4">
+            <span class="material-icons"> bookmark </span>
+          </h1></a
         >
       </div>
     </div>

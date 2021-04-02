@@ -49,3 +49,48 @@ post.addEventListener("click", function () {
 function closePost() {
   document.querySelector(".post-active").style.transform = "translateY(100%)";
 }
+
+function rightMenuOpen() {
+  document.querySelector(".right-menu").style.transform = "translateX(0)";
+}
+
+function rightMenuClose() {
+  document.querySelector(".right-menu").style.transform = "translateX(100%)";
+}
+
+const bottomLinks1 = document.querySelector(".bl1");
+const bottomLinks2 = document.querySelector(".bl2");
+const bottomLinks3 = document.querySelector(".bl3");
+const bottomLinks4 = document.querySelector(".bl4");
+
+let pageCounter = 1;
+bottomLinks1.setAttribute("data-value", "Feed");
+
+bottomLinks1.addEventListener("click", function () {
+  bottomLinks1.classList.add("bl-active");
+  bottomLinks3.classList.remove("bl-active");
+  bottomLinks2.classList.remove("bl-active");
+  bottomLinks4.classList.remove("bl-active");
+  bottomLinks1.setAttribute("data-value", "Feed");
+});
+bottomLinks2.addEventListener("click", function () {
+  bottomLinks2.classList.add("bl-active");
+  bottomLinks3.classList.remove("bl-active");
+  bottomLinks1.classList.remove("bl-active");
+  bottomLinks4.classList.remove("bl-active");
+  bottomLinks2.setAttribute("data-value", "Trend");
+});
+bottomLinks3.addEventListener("click", function () {
+  bottomLinks3.classList.add("bl-active");
+  bottomLinks2.classList.remove("bl-active");
+  bottomLinks1.classList.remove("bl-active");
+  bottomLinks4.classList.remove("bl-active");
+  bottomLinks3.setAttribute("data-value", "Videos");
+});
+bottomLinks4.addEventListener("click", function () {
+  bottomLinks4.classList.add("bl-active");
+  bottomLinks3.classList.remove("bl-active");
+  bottomLinks1.classList.remove("bl-active");
+  bottomLinks2.classList.remove("bl-active");
+  bottomLinks4.setAttribute("data-value", "Bookmarked");
+});
