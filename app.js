@@ -4,7 +4,6 @@ const scrollCheck = document.querySelector(".scroll-check");
 const topBar = document.querySelector(".screen-top");
 const bottomBar = document.querySelector(".screen-bottom");
 const width = document.querySelectorAll(".content").offsetWidth;
-const slider = document.querySelector(".imp-news");
 
 screenBody.addEventListener("scroll", function () {
   if (scrollCheck.getBoundingClientRect().top > scrollPos) {
@@ -17,3 +16,36 @@ screenBody.addEventListener("scroll", function () {
     bottomBar.style.transform = "translateY(50px)";
   }
 });
+
+const slider = document.querySelector(".imp-news");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = x - startX;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+const post = document.querySelector(".post-content");
+
+post.addEventListener("click", function () {
+  document.querySelector(".post-active").style.display = "block";
+});
+
+function closePost() {
+  document.querySelector(".post-active").style.display = "none";
+}

@@ -1,15 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 body {
@@ -35,7 +31,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   background-color: rgb(247, 77, 77);
   font-size: 0.6rem;
   display: flex;
@@ -92,6 +88,81 @@ body {
   position: relative;
 }
 
+.post-content:active {
+  background-color: rgb(243, 243, 243);
+}
+
+.post-active {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 6;
+  overflow: scroll;
+}
+
+.post-active::-webkit-scrollbar {
+  display: none;
+}
+
+.post-active img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.post-active img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.post-active-img {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  border-bottom: 3px solid rgb(247, 77, 77);
+}
+
+.post-body {
+  padding: 10px;
+}
+
+.post-body p {
+  font-family: "Roboto", sans-serif;
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.616);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.buttons {
+  width: 100%;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 1.3rem;
+}
+
 .imp-news {
   width: 100%;
   margin-top: 45px;
@@ -129,6 +200,7 @@ body {
 
 .content::after {
   content: "Lorem ipsum dolor sit amet consectetur.";
+  line-height: 20px;
   font-size: 0.8rem;
   color: white;
   display: flex;
