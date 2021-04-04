@@ -137,12 +137,12 @@ funFact.addEventListener("mouseup", (e) => {
 });
 
 funFact.addEventListener("touchstart", (e) => {
+  e.preventDefault();
   ts = e.touches[0].clientX;
-  console.log(e);
 });
 
 funFact.addEventListener("touchmove", (e) => {
-  console.log(e);
+  e.preventDefault();
 
   te = e.touches[0].clientX;
 
