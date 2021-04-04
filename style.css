@@ -53,6 +53,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: scroll;
+  position: relative;
 }
 
 .home-page::-webkit-scrollbar {
@@ -79,6 +80,7 @@ body {
   height: 13vh;
   object-fit: cover;
   transition: 0.3s;
+  pointer-events: none;
 }
 
 .content-box:active img {
@@ -154,13 +156,13 @@ body {
 
 .post-active img {
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   object-fit: cover;
 }
 
 .post-active-img {
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   position: relative;
   border-bottom: 3px solid rgb(247, 77, 77);
 }
@@ -211,6 +213,7 @@ body {
   flex-wrap: nowrap;
   overflow: scroll;
   padding: 0 10px;
+  margin-top: 45px;
 }
 
 .imp-news::-webkit-scrollbar {
@@ -232,6 +235,7 @@ body {
   height: 250px;
   object-fit: cover;
   transition: 0.3s;
+  pointer-events: none;
 }
 
 .content:active img {
@@ -253,16 +257,19 @@ body {
   position: absolute;
   left: 0;
   top: -10px;
+  pointer-events: none;
 }
 
 .post-img {
   overflow: hidden;
   margin-bottom: 5px;
+  pointer-events: none;
 }
 
 .post-header {
   font-size: 0.6rem;
   margin-bottom: 10px;
+  pointer-events: none;
 }
 
 .details {
@@ -272,6 +279,7 @@ body {
   align-items: flex-end;
   color: rgb(122, 122, 122);
   margin-bottom: 10px;
+  pointer-events: none;
 }
 
 .hits {
@@ -377,15 +385,6 @@ body {
   color: white;
   position: relative;
   z-index: 8;
-}
-
-.p-tr {
-  width: 100%;
-  height: 45px;
-  max-height: 90px;
-  min-height: 45px;
-  background-color: rgb(247, 230, 230);
-  transition: 0.3s;
 }
 
 @media (max-width: 768px) {

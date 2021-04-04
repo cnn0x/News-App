@@ -42,8 +42,18 @@ slider.addEventListener("mousemove", (e) => {
 
 const post = document.querySelector(".content-box");
 
-post.addEventListener("click", function () {
-  document.querySelector(".post-active").style.transform = "translateY(0)";
+document.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (e.target.className === "content-box") {
+    document.querySelector(".post-active").style.transform = "translateY(0)";
+  }
+});
+
+document.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (e.target.id === "cb") {
+    document.querySelector(".post-active").style.transform = "translateY(0)";
+  }
 });
 
 function closePost() {
@@ -98,39 +108,12 @@ bottomLinks4.addEventListener("click", function () {
 const content = document.querySelector(".content");
 const funFact = document.querySelector(".fun-fact");
 
-content.addEventListener("click", function () {
-  funFact.style.transform = "translateY(0)";
-});
-
 function closeff() {
   funFact.style.transform = "translateY(-100%)";
 }
 
-const ptr = document.querySelector(".p-tr");
-const wp = document.querySelector(".mobile-container");
-
-let start;
-let end;
-let change;
-let isStarted = false;
-
-wp.addEventListener("mousedown", function (e) {
-  start = e.clientY;
-  console.log("start", start);
-  isStarted = true;
-});
-
-wp.addEventListener("mousemove", function (e) {
-  if (!isStarted) return;
-  if (screenBody.scrollTop === 0) {
-    end = e.clientY;
-    console.log("end", end);
-    let change = end - start;
-    console.log("change", change);
-    ptr.style.height = change + "px";
+document.addEventListener("click", function (e) {
+  if (e.target.className == "content") {
+    funFact.style.transform = "translateY(0)";
   }
-});
-
-wp.addEventListener("mouseup", function (e) {
-  isStarted = false;
 });
