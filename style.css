@@ -408,7 +408,7 @@ body {
     height: 18vh;
   }
 
-  .screen-bottom {
-    position: absolute;
+  .bottom-nav {
+    position: fixed;
   }
 }
