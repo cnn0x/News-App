@@ -409,6 +409,6 @@ body {
   }
 
   .screen-bottom {
-    position: fixed;
+    position: absolute;
   }
 }
