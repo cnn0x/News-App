@@ -43,14 +43,12 @@ slider.addEventListener("mousemove", (e) => {
 const post = document.querySelector(".content-box");
 
 document.addEventListener("click", function (e) {
-  console.log(e.target);
   if (e.target.className === "content-box") {
     document.querySelector(".post-active").style.transform = "translateY(0)";
   }
 });
 
 document.addEventListener("click", function (e) {
-  console.log(e.target);
   if (e.target.id === "cb") {
     document.querySelector(".post-active").style.transform = "translateY(0)";
   }
@@ -116,4 +114,26 @@ document.addEventListener("click", function (e) {
   if (e.target.className == "content") {
     funFact.style.transform = "translateY(0)";
   }
+});
+
+let ts;
+let te;
+let tc;
+let isT = false;
+let ic = 1000;
+
+funFact.addEventListener("mousedown", (e) => {
+  ts = e.clientX;
+});
+
+funFact.addEventListener("mouseup", (e) => {
+  te = e.clientX;
+
+  if (ts - te > 0) {
+    ic++;
+    document.querySelector(".fimg").src =
+      "https://source.unsplash.com/500x" + ic;
+  }
+
+  console.log(document.querySelector(".fimg"));
 });
