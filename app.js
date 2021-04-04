@@ -134,6 +134,26 @@ funFact.addEventListener("mouseup", (e) => {
     document.querySelector(".fimg").src =
       "https://source.unsplash.com/500x" + ic;
   }
+});
 
-  console.log(document.querySelector(".fimg"));
+funFact.addEventListener("touchstart", (e) => {
+  ts = e.touches[0].clientX;
+  console.log(e);
+});
+
+funFact.addEventListener("touchmove", (e) => {
+  console.log(e);
+
+  te = e.touches[0].clientX;
+
+  if (ts - te > 50) {
+    document.querySelector(".loading").style.display = "block";
+    ic++;
+    document.querySelector(".fimg").src =
+      "https://source.unsplash.com/500x" + ic;
+  }
+
+  setTimeout(() => {
+    document.querySelector(".loading").style.display = "none";
+  }, 2000);
 });

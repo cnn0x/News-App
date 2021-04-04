@@ -387,6 +387,26 @@ body {
   z-index: 8;
 }
 
+.loading {
+  position: absolute;
+  color: white;
+  z-index: 9;
+  bottom: 50%;
+  left: 50%;
+  font-size: 2rem;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 768px) {
   .mobile-container {
     height: 100%;
