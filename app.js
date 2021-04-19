@@ -155,13 +155,10 @@ funFact.addEventListener("mouseup", (e) => {
 const loadingIcon = document.querySelector(".loading");
 
 funFact.addEventListener("touchstart", (e) => {
-  e.preventDefault();
   ts = e.touches[0].clientX;
 });
 
 funFact.addEventListener("touchmove", (e) => {
-  e.preventDefault();
-
   te = e.touches[0].clientX;
 
   if (ts - te > 50) {
