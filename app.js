@@ -4,6 +4,9 @@ const scrollCheck = document.querySelector(".scroll-check");
 const topBar = document.querySelector(".top-nav");
 const bottomBar = document.querySelector(".bottom-nav");
 const width = document.querySelectorAll(".content").offsetWidth;
+const trendsPage = document.querySelector(".trends-page");
+const videosPage = document.querySelector(".videos-page");
+const bookmarkPage = document.querySelector(".bookmark-page");
 
 screenBody.addEventListener("scroll", function () {
   if (scrollCheck.getBoundingClientRect().top > scrollPos) {
@@ -60,6 +63,7 @@ function closePost() {
 
 function rightMenuOpen() {
   document.querySelector(".right-menu").style.transform = "translateX(0)";
+  document.querySelector(".left-menu").style.transform = "translateX(-100%)";
 }
 
 function rightMenuClose() {
@@ -80,6 +84,9 @@ bottomLinks1.addEventListener("click", function () {
   bottomLinks2.classList.remove("bl-active");
   bottomLinks4.classList.remove("bl-active");
   bottomLinks1.setAttribute("data-value", "Feed");
+  trendsPage.style.transform = "translateY(100%)";
+  videosPage.style.transform = "translateY(100%)";
+  bookmarkPage.style.transform = "translateY(100%)";
 });
 bottomLinks2.addEventListener("click", function () {
   bottomLinks2.classList.add("bl-active");
@@ -87,6 +94,9 @@ bottomLinks2.addEventListener("click", function () {
   bottomLinks1.classList.remove("bl-active");
   bottomLinks4.classList.remove("bl-active");
   bottomLinks2.setAttribute("data-value", "Trend");
+  trendsPage.style.transform = "translateY(0)";
+  videosPage.style.transform = "translateY(100%)";
+  bookmarkPage.style.transform = "translateY(100%)";
 });
 bottomLinks3.addEventListener("click", function () {
   bottomLinks3.classList.add("bl-active");
@@ -94,6 +104,9 @@ bottomLinks3.addEventListener("click", function () {
   bottomLinks1.classList.remove("bl-active");
   bottomLinks4.classList.remove("bl-active");
   bottomLinks3.setAttribute("data-value", "Videos");
+  trendsPage.style.transform = "translateY(100%)";
+  videosPage.style.transform = "translateY(0)";
+  bookmarkPage.style.transform = "translateY(100%)";
 });
 bottomLinks4.addEventListener("click", function () {
   bottomLinks4.classList.add("bl-active");
@@ -101,6 +114,9 @@ bottomLinks4.addEventListener("click", function () {
   bottomLinks1.classList.remove("bl-active");
   bottomLinks2.classList.remove("bl-active");
   bottomLinks4.setAttribute("data-value", "Bookmarked");
+  trendsPage.style.transform = "translateY(100%)";
+  videosPage.style.transform = "translateY(100%)";
+  bookmarkPage.style.transform = "translateY(0)";
 });
 
 const content = document.querySelector(".content");
@@ -170,6 +186,7 @@ document.querySelector("bookmark").addEventListener("click", function () {
 
 function profileOpen() {
   document.querySelector(".left-menu").style.transform = "translateX(0)";
+  document.querySelector(".right-menu").style.transform = "translateX(100%)";
 }
 
 function profileClose() {
