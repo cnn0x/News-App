@@ -18,7 +18,7 @@
   <body>
     <div class="mobile-container">
       <div class="fun-fact">
-        <i style="display: none" class="loading fas fa-hourglass-half"></i>
+        <i class="loading fas fa-hourglass-half"></i>
         <div class="overlay-ff">
           <i
             style="color: white; padding: 15px; font-size: 1.2rem"
@@ -39,7 +39,7 @@
           <div class="overlay">
             <div class="buttons">
               <i onclick="closePost();" class="fas fa-arrow-left"></i>
-              <i class="far fa-bookmark"></i>
+              <i onclick="bookmarked();" class="far fa-bookmark"></i>
             </div>
             <h1>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor sit
@@ -52,28 +52,127 @@
             alt=""
           />
         </div>
-        <div class="post-body"></div>
+        <div class="post-body">
+          <h4 style="color: rgb(247, 77, 77)">SCIENCE</h4>
+          <h5 style="color: gray; margin-bottom: 10px">
+            Fatih Can - <span style="font-weight: 600">10 Hours ago</span>
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            asperiores dolor eligendi neque maxime praesentium repellendus,
+            magni delectus autem incidunt?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+            nisi itaque debitis quos deleniti vel nam porro id? Sit commodi enim
+            libero quasi quibusdam. Laudantium ut quibusdam voluptatem et
+            excepturi.
+          </p>
+          <img src="https://source.unsplash.com/500x501" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            nesciunt qui eligendi ad corporis illum ipsa aliquam vitae labore
+            quod quisquam dolorum nihil nam, error reiciendis explicabo porro
+            tenetur facilis itaque adipisci cum minima. Laboriosam magni sequi
+            quae nam? Facilis aliquid et non fugiat nostrum beatae, esse
+            perspiciatis? Aliquid, sint.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium voluptate, officiis commodi voluptatum odio vero est
+            dolore? Culpa, possimus! Officiis, ducimus nesciunt ipsum
+            voluptatibus illo cum odit voluptates voluptas vitae!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+            assumenda ullam temporibus illum doloremque reprehenderit,
+            asperiores iure possimus inventore quasi repellendus eveniet beatae
+            repudiandae doloribus vel sunt ratione perferendis. Mollitia
+            temporibus praesentium esse sed rem dignissimos consectetur nihil,
+            commodi expedita in perspiciatis ipsum consequatur eius nulla,
+            voluptatibus autem? Atque doloremque ullam sit molestiae repellendus
+            dolorem veniam dolor dignissimos beatae voluptas.
+          </p>
+          <div
+            class="mit"
+            style="
+              color: white;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 20px;
+              background-color: rgb(247, 77, 77);
+              padding: 10px;
+              border-radius: 5px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <i style="font-size: 1.5rem" class="fas fa-fire"></i>
+              <h3 style="margin-left: 5px">Make it Trend</h3>
+            </div>
+            <div><span style="font-weight: 600">4837</span></div>
+          </div>
+          <div class="yml">
+            <h3>You May Like</h3>
+            <div class="yml-content">
+              <img src="https://source.unsplash.com/500x500" alt="" />
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                expedita.
+              </h1>
+            </div>
+            <div class="yml-content">
+              <img src="https://source.unsplash.com/500x502" alt="" />
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime.
+              </h1>
+            </div>
+            <div class="yml-content">
+              <img src="https://source.unsplash.com/500x501" alt="" />
+              <h1>
+                Lorem ipsum consectetur adipisicing elit. Maxime, expedita.
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="right-menu">
-        <span
-          onclick="rightMenuClose();"
-          style="
-            color: white;
-            font-size: 2rem;
-            font-weight: 700;
-            height: 40px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            padding-left: 10px;
-            padding-bottom: 8px;
-            cursor: pointer;
-          "
-          >&times;</span
-        >
+        <div class="timestwo" onclick="rightMenuClose();">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="left-menu">
+        <div class="timesone" onclick="profileClose();">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="l-profile">
+          <img src="https://source.unsplash.com/250x250" alt="" />
+          <div>Fatih Can</div>
+        </div>
+        <div class="catalog">
+          <span style="color: rgb(247, 77, 77); margin-bottom: 10px"
+            >Categories</span
+          >
+          <span>Science</span><br />
+          <span>Life</span><br />
+          <span>Economy</span><br />
+          <span>Space</span><br />
+          <span>Life Style</span><br />
+          <span>Politic</span><br />
+          <span>Nature</span><br />
+          <span>Games</span><br />
+          <span>Hardware</span><br />
+          <hr />
+        </div>
       </div>
       <div class="top-nav">
-        <span class="material-icons"> person </span>
+        <span onclick="profileOpen();" class="material-icons"> person </span>
         <div>
           <span class="material-icons"> linear_scale </span>
         </div>

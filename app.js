@@ -136,6 +136,8 @@ funFact.addEventListener("mouseup", (e) => {
   }
 });
 
+const loadingIcon = document.querySelector(".loading");
+
 funFact.addEventListener("touchstart", (e) => {
   e.preventDefault();
   ts = e.touches[0].clientX;
@@ -147,13 +149,29 @@ funFact.addEventListener("touchmove", (e) => {
   te = e.touches[0].clientX;
 
   if (ts - te > 50) {
-    document.querySelector(".loading").style.display = "block";
+    loadingIcon.style.display = "block";
     ic++;
     document.querySelector(".fimg").src =
       "https://source.unsplash.com/500x" + ic;
   }
 
   setTimeout(() => {
-    document.querySelector(".loading").style.display = "none";
+    loadingIcon.style.display = "none";
   }, 2000);
 });
+
+function bookmarked() {
+  document.querySelector(".fa-bookmark").classList.toggle("fas");
+}
+
+document.querySelector("bookmark").addEventListener("click", function () {
+  document.querySelector(".fa-bookmark").classList.toggle("fas");
+});
+
+function profileOpen() {
+  document.querySelector(".left-menu").style.transform = "translateX(0)";
+}
+
+function profileClose() {
+  document.querySelector(".left-menu").style.transform = "translateX(-100%)";
+}
